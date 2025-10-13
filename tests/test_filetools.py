@@ -1,13 +1,22 @@
-from src.misc_tooling.file_tools import make_file, delete_file, write_file, delete_folder, file_exists
+from src.misc_tooling.file_tools import (
+    make_file,
+    delete_file,
+    write_file,
+    delete_folder,
+    file_exists,
+)
 import pytest
 import os
 import shutil
 import pathlib
 from pathlib import Path
+
+
 class TestFileTools:
     def setup_method(self):
         self.folder = Path("test_stuff")
         self.folder.mkdir()
+
     def test_make_file(self):
         m = make_file("test_stuff/test.txt")
         exists = file_exists("test_stuff/test.txt")
@@ -15,6 +24,7 @@ class TestFileTools:
         assert exists
         if exists:
             delete_file("test_stuff/test.txt")
+
     def test_remove_file(self):
         m = make_file("test_stuff/test.txt")
         if m:

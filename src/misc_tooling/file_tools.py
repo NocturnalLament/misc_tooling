@@ -6,9 +6,11 @@ def file_exists(file_path) -> bool:
     """Returns whether or not the file exists"""
     return Path(file_path).exists()
 
+
 def get_full_path(file_path: str) -> str:
     """returns the full path"""
     return str(Path(file_path).resolve())
+
 
 def read_file(file_path: str) -> str:
     """Reads a file to a string"""
@@ -39,7 +41,8 @@ def write_file(file_path, file_data):
     except PermissionError as e:
         print(f"Exception: {e}")
         return False
-    
+
+
 def write_file_all(file_path, file_data):
     """Creates a files path and writes a file to it"""
     try:

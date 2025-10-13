@@ -25,7 +25,7 @@ class StringBuilder:
     def drop_string(self, dropped):
         """Drops string from memorys"""
         if not "." in dropped:
-            dropped += " " 
+            dropped += " "
         if dropped in self.input_memory:
             self.input_memory.remove(dropped)
 
@@ -46,10 +46,7 @@ class StringBuilder:
         """Replace string at index"""
         if 0 <= index < len(self.input_memory) and isinstance(value, str):
             self.input_memory[index] = value + " " if not "." in value else value
-    
+
     def __str__(self) -> str:
         """Returns as a string"""
         return self.render()
-
-    
-

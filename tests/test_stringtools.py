@@ -1,5 +1,6 @@
 from src.misc_tooling.string_builder import StringBuilder
 
+
 class TestStringTools:
     def test_build_string(self):
         s = StringBuilder("This", "is", "a", "test")
